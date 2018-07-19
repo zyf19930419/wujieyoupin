@@ -42,7 +42,18 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:drawableTop="@drawable/icon_mell_unselected"
-                android:text="线上商城" />
+                android:text="线下店铺" />
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:drawableTop="@drawable/icon_mell_unselected"
+                    android:text="线上商城" />
+            </RelativeLayout>
 
             <TextView
                 android:layout_width="0dp"
@@ -50,7 +61,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:drawableTop="@drawable/icon_mell_unselected"
-                android:text="线上商城" />
+                android:text="购物车" />
 
             <TextView
                 android:layout_width="0dp"
@@ -58,15 +69,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:drawableTop="@drawable/icon_mell_unselected"
-                android:text="线上商城" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:drawableTop="@drawable/icon_mell_unselected"
-                android:text="线上商城" />
+                android:text="我的" />
 
         </LinearLayout>
     </android.support.constraint.ConstraintLayout>
