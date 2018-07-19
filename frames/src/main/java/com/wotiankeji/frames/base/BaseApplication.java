@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import android.util.DisplayMetrics;
 
+import com.wotiankeji.frames.utils.LogUtils;
+
 /**
  * 创建者：zhangyunfei
  * 创建时间：2018/7/18 14:13
@@ -16,6 +18,7 @@ public class BaseApplication extends Application {
     public void onCreate() {
         super.onCreate();
         mApplication=this;
+        LogUtils.isDebug=true;
 
     }
 

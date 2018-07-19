@@ -21,11 +21,13 @@ public class ToastUtils {
     private static Toast toast;
     private static Toast toast2;
 
-    private static Toast initToast(CharSequence message, int duration) {
+    private static Toast initToast(CharSequence message, int duration,int gravity) {
         if (toast == null) {
             toast = Toast.makeText(BaseApplication.getAppContext(), message, duration);
+            toast.setGravity(gravity,0,0);
         } else {
             toast.setText(message);
+            toast.setGravity(gravity,0,0);
             toast.setDuration(duration);
         }
         return toast;
@@ -36,8 +38,8 @@ public class ToastUtils {
      *
      * @param message
      */
-    public static void showShort(CharSequence message) {
-        initToast(message, Toast.LENGTH_SHORT).show();
+    public static void showShort(CharSequence message,int gravity) {
+        initToast(message, Toast.LENGTH_SHORT,gravity).show();
     }
 
 
@@ -46,8 +48,8 @@ public class ToastUtils {
      *
      * @param strResId
      */
-    public static void showShort(int strResId) {
-        initToast(BaseApplication.getAppContext().getResources().getText(strResId), Toast.LENGTH_SHORT).show();
+    public static void showShort(int strResId,int gravity) {
+        initToast(BaseApplication.getAppContext().getResources().getText(strResId), Toast.LENGTH_SHORT,gravity).show();
     }
 
     /**
@@ -55,8 +57,8 @@ public class ToastUtils {
      *
      * @param message
      */
-    public static void showLong(CharSequence message) {
-        initToast(message, Toast.LENGTH_LONG).show();
+    public static void showLong(CharSequence message,int gravity) {
+        initToast(message, Toast.LENGTH_LONG,gravity).show();
     }
 
     /**
@@ -64,8 +66,8 @@ public class ToastUtils {
      *
      * @param strResId
      */
-    public static void showLong(int strResId) {
-        initToast(BaseApplication.getAppContext().getResources().getText(strResId), Toast.LENGTH_LONG).show();
+    public static void showLong(int strResId,int gravity) {
+        initToast(BaseApplication.getAppContext().getResources().getText(strResId), Toast.LENGTH_LONG,gravity).show();
     }
 
     /**
@@ -74,8 +76,8 @@ public class ToastUtils {
      * @param message
      * @param duration
      */
-    public static void show(CharSequence message, int duration) {
-        initToast(message, duration).show();
+    public static void show(CharSequence message, int duration,int gravity) {
+        initToast(message, duration,gravity).show();
     }
 
     /**
@@ -85,8 +87,8 @@ public class ToastUtils {
      * @param strResId
      * @param duration
      */
-    public static void show(Context context, int strResId, int duration) {
-        initToast(context.getResources().getText(strResId), duration).show();
+    public static void show(Context context, int strResId, int duration,int gravity) {
+        initToast(context.getResources().getText(strResId), duration,gravity).show();
     }
 
     /**
